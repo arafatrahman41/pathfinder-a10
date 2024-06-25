@@ -46,7 +46,7 @@ const Nav = () => {
             {navLinks}
           </ul>
         </div>
-        <a className="text-2xl font-semibold md:text-4xl font-montserrat">PathFinder</a>
+        <Link to='/' className="text-2xl font-semibold md:text-4xl font-montserrat">PathFinder</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-roboto font-semibold">{navLinks}</ul>
