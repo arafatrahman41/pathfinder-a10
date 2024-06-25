@@ -8,11 +8,11 @@ const Home = () => {
     <div>
       <Slider />
       <div className="container mx-auto mt-20 pb-20">
-        <small className="text-[#37B7C3]">CHOOSE YOUR PLACE</small>
+        <small className="text-[#37B7C3] uppercase">top destination</small>
         <h2 className="text-4xl font-montserrat font-bold text-[#071952]">
-          POPULAR <span className="text-[#37B7C3]">TOURS</span>
+          POPULAR <span className="text-[#37B7C3]">DESTINATION</span>
         </h2>
-        <ul>
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {spots.map((spot) => (
             <PopularSpot key={spot._id} spot={spot}></PopularSpot>
           ))}
