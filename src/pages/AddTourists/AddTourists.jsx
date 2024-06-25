@@ -1,11 +1,41 @@
+import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+
 const AddTourists = () => {
+
+  const {
+    register,
+    handleSubmit,
+  } = useForm()
+
+  const onSubmit = (data) => (
+    fetch('http://localhost:5000/touristSpot', {
+      method: 'POST', 
+      headers: {
+        "content-type" : "application/json",
+      },
+      body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(data => {
+      if(data.insertedId){
+        Swal.fire({
+          title: 'success!',
+          text: 'Spot Added successfully',
+          icon: 'success',
+          confirmButtonText: 'OK'
+        })
+      }
+    })
+  )
+
   return (
     <div className="flex justify-center container mx-auto py-20 px-8">
       <div className="w-full lg:w-2/3 xl:w-1/2 p-12 space-y-3 rounded-xl bg-[#37B7C3]">
         <h1 className="text-2xl font-bold text-center text-[#EBF4F6] font-montserrat">
           Add Tourist Spot 
         </h1>
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid col-span-1 md:grid-cols-6 gap-6">
             {/* first field */}
             <div className="space-y-1 md:col-span-3 text-sm">
@@ -20,7 +50,7 @@ const AddTourists = () => {
                 name="tourist_spot_name"
                 id="spotName"
                 placeholder="Enter Your Spot Name"
-                className="w-full px-4 py-3 rounded-xl font-roboto"
+                className="w-full px-4 py-3 rounded-xl font-roboto" {...register("tourist_spot_name")}
               />
             </div>
             {/* second field */}
@@ -36,7 +66,7 @@ const AddTourists = () => {
                 name="country_name"
                 id="countryName"
                 placeholder="Enter The Country"
-                className="w-full px-4 py-3 rounded-xl font-roboto"
+                className="w-full px-4 py-3 rounded-xl font-roboto" {...register("country_name")}
               />
             </div>
             {/* third field */}
@@ -52,7 +82,7 @@ const AddTourists = () => {
                 name="location"
                 id="location"
                 placeholder="Enter Your Location"
-                className="w-full px-4 py-3 rounded-xl font-roboto"
+                className="w-full px-4 py-3 rounded-xl font-roboto" {...register("location")}
               />
             </div>
             {/* fourth field */}
@@ -68,7 +98,7 @@ const AddTourists = () => {
                 name="average_cost"
                 id="averageCost"
                 placeholder="Average Cost"
-                className="w-full px-4 py-3 rounded-xl font-roboto"
+                className="w-full px-4 py-3 rounded-xl font-roboto" {...register("average_cost")}
               />
             </div>
             {/* fifth field */}
@@ -84,7 +114,7 @@ const AddTourists = () => {
                 name="season"
                 id="season"
                 placeholder="season"
-                className="w-full px-4 py-3 rounded-xl font-roboto"
+                className="w-full px-4 py-3 rounded-xl font-roboto" {...register("season")}
               />
             </div>
             {/* sixth field */}
@@ -100,7 +130,7 @@ const AddTourists = () => {
                 name="travel_time"
                 id="time"
                 placeholder="Travel Time"
-                className="w-full px-4 py-3 rounded-xl font-roboto"
+                className="w-full px-4 py-3 rounded-xl font-roboto" {...register("travel_time")}
               />
             </div>
             {/* seventh field */}
@@ -116,7 +146,7 @@ const AddTourists = () => {
                 name="totalVisitorPerYear"
                 id="visitor"
                 placeholder="Visitor Per Year"
-                className="w-full px-4 py-3 rounded-xl font-roboto"
+                className="w-full px-4 py-3 rounded-xl font-roboto" {...register("totalVisitorPerYear")}
               />
             </div>
             {/* eighth field */}
@@ -132,7 +162,7 @@ const AddTourists = () => {
                 name="name" 
                 id="name"
                 placeholder="Enter Your Name"
-                className="w-full px-4 py-3 rounded-xl font-roboto"
+                className="w-full px-4 py-3 rounded-xl font-roboto" {...register("name")}
               />
             </div>
             {/* ninth field */}
@@ -148,7 +178,7 @@ const AddTourists = () => {
                 name="email"
                 id="email"
                 placeholder="Enter Your Email"
-                className="w-full px-4 py-3 rounded-xl font-roboto"
+                className="w-full px-4 py-3 rounded-xl font-roboto" {...register("email")}
               />
             </div>
             {/* tenth field */}
@@ -164,7 +194,7 @@ const AddTourists = () => {
                 name="image"
                 id="image"
                 placeholder="Image URL"
-                className="w-full px-4 py-3 rounded-xl font-roboto"
+                className="w-full px-4 py-3 rounded-xl font-roboto" {...register("image")}
               />
             </div>
             {/* eleventh field */}
@@ -180,7 +210,7 @@ const AddTourists = () => {
                 name="description"
                 id="description"
                 placeholder="Short Description"
-                className="w-full px-4 py-3 rounded-xl font-roboto"
+                className="w-full px-4 py-3 rounded-xl font-roboto" {...register("description")}
               />
             </div>
           </div>

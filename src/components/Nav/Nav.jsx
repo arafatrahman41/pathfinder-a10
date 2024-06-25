@@ -53,7 +53,7 @@ const Nav = () => {
       </div>
       <div className="navbar-end gap-3">
         <Link to='login' className="bg-[#37B7C3] md:text-lg font-roboto text-[#EBF4F6] py-3 rounded-xl hover:scale-105 hover:opacity-95 w-28 text-center">Login</Link>
-        <Link to='register' className="bg-[#37B7C3] lg:text-lg font-roboto text-[#EBF4F6] py-3 rounded-xl hover:scale-105 hover:opacity-95 w-28 text-center">Register</Link>
+        <Link to='register' className="bg-[#37B7C3] md:text-lg font-roboto text-[#EBF4F6] py-3 rounded-xl hover:scale-105 hover:opacity-95 w-28 text-center">Register</Link>
       </div>
     </div>
     </div>
