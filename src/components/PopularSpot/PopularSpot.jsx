@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const PopularSpot = ({ spot }) => {
-  console.log(spot);
   const { image, tourist_spot_name, country_name, description, _id
   } = spot;
   return (
