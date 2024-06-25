@@ -46,14 +46,14 @@ const Nav = () => {
             {navLinks}
           </ul>
         </div>
-        <a className="text-2xl font-semibold md:text-4xl">PathFinder</a>
+        <a className="text-2xl font-semibold md:text-4xl font-montserrat">PathFinder</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-roboto font-semibold">{navLinks}</ul>
       </div>
       <div className="navbar-end gap-3">
-        <Link to='login' className="bg-[#37B7C3] text-lg font-roboto text-[#EBF4F6] px-6 py-3 rounded-xl hover:scale-105 hover:opacity-95">Login</Link>
-        <Link to='register' className="bg-[#37B7C3] text-lg font-roboto text-[#EBF4F6] px-6 py-3 rounded-xl hover:scale-105 hover:opacity-95">Register</Link>
+        <Link to='login' className="bg-[#37B7C3] md:text-lg font-roboto text-[#EBF4F6] py-3 rounded-xl hover:scale-105 hover:opacity-95 w-28 text-center">Login</Link>
+        <Link to='register' className="bg-[#37B7C3] lg:text-lg font-roboto text-[#EBF4F6] py-3 rounded-xl hover:scale-105 hover:opacity-95 w-28 text-center">Register</Link>
       </div>
     </div>
     </div>
