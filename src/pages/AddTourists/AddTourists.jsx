@@ -21,7 +21,7 @@ const AddTourists = () => {
       if(data.insertedId){
         Swal.fire({
           title: 'success!',
-          text: 'Spot Added successfully',
+          text: 'Spot Added Successfully',
           icon: 'success',
           confirmButtonText: 'OK'
         })
@@ -214,7 +214,8 @@ const AddTourists = () => {
               />
             </div>
           </div>
-          <button className="w-full mt-6 p-3 text-center rounded-xl bg-[#071952] text-[#EBF4F6] font-roboto">
+          <button
+          className="w-full mt-6 p-3 text-center rounded-xl bg-[#071952] text-[#EBF4F6] font-roboto">
             Add Spot
           </button>
         </form>
