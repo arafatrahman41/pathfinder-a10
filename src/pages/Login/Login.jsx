@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div className="flex justify-center container mx-auto py-20">
+    <div className="flex justify-center container mx-auto py-20 px-8">
       <div className="w-full lg:w-2/3 xl:w-1/2 p-12 space-y-3 rounded-xl bg-[#37B7C3]">
         <h1 className="text-2xl font-bold text-center text-[#EBF4F6] font-montserrat">Login</h1>
         <form noValidate="" action="" className="space-y-6">

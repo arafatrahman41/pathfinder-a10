@@ -25,7 +25,7 @@ const Footer = () => {
           <h2 className="text-xl font-semibold font-montserrat">Subscribe</h2>
           <p className="mt-3 lg:w-2/3">Sign up for our monthly blogletter to stay informed about travel and tours</p>
           <div className="relative">
-          <input className="mt-6 py-4 pr-28 rounded-xl" type="email" name="email" id="email" placeholder="Email Address" />
+          <input className="mt-6 py-4 pr-28 rounded-xl" type="email" name="email" id="footerEmail" placeholder="Email Address" />
           <button className="bg-[#37B7C3] rounded-xl px-6 py-3 hover:opacity-95 font-semibold absolute top-7 right-11 md:right-2 lg:right-[215px]">Send</button>
           </div>
         </div>
