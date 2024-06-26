@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 const Register = () => {
   const { createUser } = useAuth();
 
+  // navigation
   const navigate = useNavigate();
   const location = useLocation();
   const from = location?.state || "/";

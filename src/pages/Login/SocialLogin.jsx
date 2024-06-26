@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 const SocialLogin = () => {
   const { googleLogin, twitterLogin, githubLogin } = useAuth();
 
+  // navigation
   const navigate = useNavigate();
   const location = useLocation();
   const from = location?.state || "/";

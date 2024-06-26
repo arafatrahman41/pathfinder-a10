@@ -16,42 +16,47 @@ export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  console.log(user);
+  const [loading, setLoading] = useState(true);
 
   // social auth provider
   const googleProvider = new GoogleAuthProvider();
   const twitterProvider = new TwitterAuthProvider();
-  const githubProvider = new GithubAuthProvider()
+  const githubProvider = new GithubAuthProvider();
 
   // create user
   const createUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   // signIn User
   const signInUser = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   // social signIn
-  // google 
+  // google
   const googleLogin = () => {
+    setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
 
   // twitter
   const twitterLogin = () => {
+    setLoading(true);
     return signInWithPopup(auth, twitterProvider);
-  }
+  };
 
   // github
   const githubLogin = () => {
-    return signInWithPopup(auth, githubProvider)
-  }
+    setLoading(true);
+    return signInWithPopup(auth, githubProvider);
+  };
 
   // signOut user
   const logOut = () => {
-    setUser(null)
+    setUser(null);
     return signOut(auth);
   };
 
@@ -60,6 +65,7 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
+        setLoading(false);
       }
     });
     return () => {
@@ -75,6 +81,7 @@ const AuthProvider = ({ children }) => {
     twitterLogin,
     githubLogin,
     logOut,
+    loading
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
