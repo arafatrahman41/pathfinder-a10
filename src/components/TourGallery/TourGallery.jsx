@@ -11,11 +11,11 @@ import netherFromSky from "../../assets/netherland-from-sky.jpg"
 
 const TourGallery = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-8">
         <small className="text-[#37B7C3] uppercase">find your place</small>
         <h2 className="text-4xl font-bold font-montserrat text-[#071952] uppercase">Tourist <span className="text-[#37B7C3]">Gallery</span></h2>
       <section className="py-6">
-        <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
+        <div className="container grid grid-cols-2 gap-4 mx-auto md:grid-cols-4">
           <img
             src={netherFromSky}
             alt=""
