@@ -1,6 +1,6 @@
 # Pathfinder - Explore Europe's Hidden Gems
 
-Live Site URL: [www.pathfinder-travel.com](https://www.pathfinder-travel.com)
+Live Site URL: []()
 
 ## About Pathfinder
 
@@ -14,10 +14,4 @@ Pathfinder is your ultimate guide to discovering the hidden wonders of Europe. W
 - **Interactive Maps and Routes**: Plan your journey with interactive maps highlighting must-see attractions and off-the-beaten-path gems.
 - **Practical Travel Tips**: Stay informed with practical advice on visa requirements, local customs, and budget-friendly travel options.
 
-## Feedback and Contributions
 
-We value your feedback! If you have suggestions or would like to contribute travel tips or stories, feel free to reach out or submit a pull request.
-
-## Get Started
-
-Explore Europe like never before with Pathfinder! Visit [www.pathfinder-travel.com](https://www.pathfinder-travel.com) to start your journey today.
