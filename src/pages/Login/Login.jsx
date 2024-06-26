@@ -1,10 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hook/useAuth";
 import toast from "react-hot-toast";
 import SocialLogin from "./SocialLogin";
 
 const Login = () => {
   const { signInUser } = useAuth();
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.state || "/";
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -15,7 +19,8 @@ const Login = () => {
     signInUser(email, password)
       .then((result) => {
         if (result.user) {
-          toast.success("Logged In Success");
+          navigate(from);
+          toast.success("User Added Successfully");
         }
       })
       .catch((error) => {

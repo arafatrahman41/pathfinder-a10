@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../hook/useAuth";
+import error from "../../assets/error-image.avif"
 
 const Nav = () => {
   const { user, logOut } = useAuth();
@@ -96,19 +97,21 @@ const Nav = () => {
                 className="btn btn-ghost btn-circle avatar"
               >
                 <div className="w-10 rounded-full">
-                  <img
-                    alt="Tailwind CSS Navbar component"
-                    src={user.photoURL}
-                  />
+                  {
+                    user.photoURL ? <img
+                    alt="image not found"
+                    src={user?.photoURL}
+                  /> : <img src={error}/>
+                  }
                 </div>
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[10] mt-3 w-52 p-2 shadow"
               >
                 <li>
                   <button className="btn btn-sm btn-ghost text-[#37B7C3]">
-                    {user.displayName}
+                  {user?.displayName || "Not Found"}
                   </button>
                 </li>
                 <li>

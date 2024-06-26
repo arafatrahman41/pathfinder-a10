@@ -34,14 +34,17 @@ const AuthProvider = ({ children }) => {
   };
 
   // social signIn
+  // google 
   const googleLogin = () => {
     return signInWithPopup(auth, googleProvider);
   };
 
+  // twitter
   const twitterLogin = () => {
     return signInWithPopup(auth, twitterProvider);
   }
 
+  // github
   const githubLogin = () => {
     return signInWithPopup(auth, githubProvider)
   }
