@@ -9,7 +9,7 @@ const AddTourists = () => {
   } = useForm()
 
   const onSubmit = (data) => (
-    fetch('http://localhost:5000/touristSpot', {
+    fetch('https://pathfinder-a10-server.vercel.app/touristSpot', {
       method: 'POST', 
       headers: {
         "content-type" : "application/json",

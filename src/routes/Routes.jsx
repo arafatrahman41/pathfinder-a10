@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:5000/touristSpot"),
+        loader: () => fetch("https://pathfinder-a10-server.vercel.app/touristSpot"),
       },
       {
         path: "/viewDetails/:id",
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/touristSpot/${params.id}`),
+          fetch(`https://pathfinder-a10-server.vercel.app/touristSpot/${params.id}`),
       },
       {
         path: "/allTourists",
