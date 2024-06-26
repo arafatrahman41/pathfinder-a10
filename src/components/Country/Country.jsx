@@ -40,7 +40,7 @@ const Country = () => {
               }}
             >
               <div className="flex flex-col justify-center items-center border h-full">
-                <h2 className="uppercase text-2xl text-rose-400 font-semibold">
+                <h2 className="uppercase text-sm md:text-2xl text-rose-400 font-semibold">
                   switzerland
                 </h2>
               </div>
@@ -54,7 +54,7 @@ const Country = () => {
               }}
             >
               <div className="flex flex-col justify-center items-center border h-full">
-                <h2 className="uppercase text-2xl text-amber-400 font-semibold">
+                <h2 className="uppercase text-sm md:text-2xl text-amber-400 font-semibold">
                   england
                 </h2>
               </div>
@@ -68,7 +68,7 @@ const Country = () => {
               }}
             >
               <div className="flex flex-col justify-center items-center border h-full">
-                <h2 className="uppercase text-2xl text-[#EBF4F6] font-semibold">
+                <h2 className="uppercase text-sm md:text-2xl text-[#EBF4F6] font-semibold">
                   netherland
                 </h2>
               </div>
@@ -82,7 +82,7 @@ const Country = () => {
               }}
             >
               <div className="flex flex-col justify-center items-center border h-full">
-                <h2 className="uppercase text-2xl text-teal-400 font-semibold">
+                <h2 className="uppercase text-sm md:text-2xl text-teal-400 font-semibold">
                   italy
                 </h2>
               </div>
@@ -96,7 +96,7 @@ const Country = () => {
               }}
             >
               <div className="flex flex-col justify-center items-center border h-full">
-                <h2 className="uppercase text-2xl text-yellow-400 font-semibold">
+                <h2 className="uppercase text-sm md:text-2xl text-[#088395] font-semibold">
                   switzerland
                 </h2>
               </div>

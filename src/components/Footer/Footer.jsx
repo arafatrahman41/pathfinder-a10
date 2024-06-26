@@ -1,4 +1,4 @@
-import { FaFacebook, FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -9,9 +9,8 @@ const Footer = () => {
           <p className="lg:w-3/4 mt-3">Your guide to exploring Europe hidden gems. Discover unique destinations, detailed travel guides, and inspiring stories to make your journey unforgettable. Follow us on social media for the latest updates and travel tips.</p>
           <div className="flex items-center gap-4 w-full my-6">
             <FaGoogle size={25}/>
-            <FaGithub size={25}/>
             <FaTwitter size={25}/>
-            <FaFacebook size={25}/>
+            <FaGithub size={25}/>
           </div>
         </div>
         <div className="flex flex-col">
