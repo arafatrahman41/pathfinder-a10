@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Slider from "../../components/Slider/Slider";
 import PopularSpot from "../../components/PopularSpot/PopularSpot";
 import TourGallery from "../../components/TourGallery/TourGallery";
+import Country from "../../components/Country/Country";
 
 const Home = () => {
   const spots = useLoaderData();
@@ -20,6 +21,7 @@ const Home = () => {
           ))}
         </ul>
       </div>
+      <Country />
     </div>
   );
 };

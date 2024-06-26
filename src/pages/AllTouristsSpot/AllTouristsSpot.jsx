@@ -3,7 +3,6 @@ import TouristsSpot from "./TouristsSpot";
 
 const AllTouristsSpot = () => {
   const allSpots = useLoaderData();
-  console.log(allSpots);
   return (
     <div>
       <h2></h2>
