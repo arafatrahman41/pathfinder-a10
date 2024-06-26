@@ -1,12 +1,14 @@
 import { useLoaderData } from "react-router-dom";
 import Slider from "../../components/Slider/Slider";
 import PopularSpot from "../../components/PopularSpot/PopularSpot";
+import TourGallery from "../../components/TourGallery/TourGallery";
 
 const Home = () => {
   const spots = useLoaderData();
   return (
     <div>
       <Slider />
+      <TourGallery />
       <div className="container mx-auto px-8 mt-20 pb-20">
         <small className="text-[#37B7C3] uppercase">top destination</small>
         <h2 className="text-4xl font-montserrat font-bold text-[#071952]">
